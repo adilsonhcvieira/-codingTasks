@@ -27,6 +27,7 @@ Building and training a Random Forest Classifier model
 Evaluating model performance using accuracy, precision, recall, and F1-score
 Visualizing the confusion matrix for better understanding of model predictions
 Identifying classes where the model struggles and exploring ways to improve
+
 4. Installation
 To run this code, you'll need the following Python libraries:
 
@@ -40,6 +41,7 @@ Bash
 pip install numpy pandas matplotlib scikit-learn
 Use code with caution.
 content_copy
+
 5. Code Walkthrough
 5.1 Data Loading and Exploration
 
@@ -49,6 +51,7 @@ Prints the shapes of the data and target arrays to understand their dimensions.
 Data shape: (1797, 64), representing 1797 images, each with 64 features (8x8 pixels).
 Target shape: (1797,), representing 1797 labels (integers from 0-9).
 Plots five sample images and their corresponding labels using matplotlib.pyplot.
+
 5.2 Train-Test Split
 
 Splits the data into training and testing sets using train_test_split from sklearn.model_selection.
@@ -56,6 +59,7 @@ Splits the data into training and testing sets using train_test_split from sklea
 X_train and X_test hold the training and testing image data, respectively.
 y_train and y_test hold the training and testing target labels (digit classes).
 Setting random_state=42 ensures reproducibility.
+
 5.3 Random Forest Classifier Model
 
 Creates a Random Forest Classifier object using RandomForestClassifier from sklearn.ensemble.
@@ -69,6 +73,7 @@ Predicts labels for the test data using model.predict(X_test).
 Calculates the confusion matrix using confusion_matrix from sklearn.metrics.
 The confusion matrix shows how many images from each true class were predicted as belonging to each class.
 A diagonal dominance indicates good performance.
+
 5.4.2 Classification Report
 
 Generates a detailed classification report using classification_report from sklearn.metrics.
@@ -77,6 +82,7 @@ Precision: How often a predicted label is correct.
 Recall: How often the model identifies a class correctly.
 F1-score: Harmonic mean of precision and recall.
 Support: Total number of true instances for a class.
+
 5.5 Identifying Struggles
 
 Analyzes the confusion matrix and classification report to identify classes where the model struggles.
